@@ -6,29 +6,59 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/imgview"
-        android:src="@drawable/favicon_20150331154137"
-        android:layout_marginTop="90dp"
+        android:src="@drawable/gallery2"
+        android:layout_marginTop="76dp"
+        android:layout_marginStart="24dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edittext1"
+        android:id="@+id/editText"
         android:layout_alignBottom="@+id/imgview"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="52dp"
-        android:layout_toEndOf="@+id/imgview" />
+        android:layout_toEndOf="@+id/imgview"
+        android:layout_marginStart="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Describe Your Post..."
+        android:textStyle="italic"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Not Safe for Work..."
+        android:textSize="18dp"
+        android:id="@+id/textView6"
+        android:textStyle="bold"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/imgview"
+        android:layout_alignStart="@+id/imgview" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggleButton"
+        android:layout_marginEnd="22dp"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload"
         android:id="@+id/upload"
-        android:layout_below="@+id/edittext1"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/toggleButton"
+        android:layout_alignEnd="@+id/toggleButton"
+        android:layout_marginTop="57dp" />
 
 </RelativeLayout>

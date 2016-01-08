@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 
 /**
@@ -20,10 +21,10 @@ public class Gallery extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_gallery,container,false);
+        GridView gridView = (GridView) view.findViewById(R.id.grid_view);
+        gridView.setAdapter(new ImageAdapter(view.getContext()));
+        return view;
     }
-
 }
